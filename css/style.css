@@ -1,0 +1,534 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;/*Обнуление гостовых отступов */
+    padding: 0;
+    color: #333;
+}
+
+                                                                            /*--- 1 блок ---*/
+header {
+  /*  background: url('../images/header-bg.jpg') no-repeat center center/cover; no-repeat - Указывает, что изображение не будет повторяться (не будет дублироваться) по горизонтали или вертикали.*/
+/*
+Первое center указывает, что изображение должно быть выровнено по центру горизонтально (вдоль оси X).
+Второе center указывает, что изображение должно быть выровнено по центру вертикально (вдоль оси Y).
+cover - увелечение или уменьшение изображение чтоб полностью покрывать элемент, не выходя за его границы.
+*/
+    position: relative;
+    color: white;
+    width: 100%;        /*ширина*/
+    height: 768px;  /*высота*/
+    padding: 0px 0px;     /* Отступ от верха(5px) и бока(0) */
+    text-align: center;
+    overflow: hidden; /* Скрыть излишки контента */
+    
+}
+
+.video-container {
+    position: absolute;  /* Абсолютное позиционирование */
+    top: 0;              /* Начало контейнера на самом верху */
+    left: 0;             /* Начало контейнера с самого левого края */
+    width: 100%;         /* Ширина контейнера на весь экран */
+    height: 100%;        /* Высота контейнера на весь экран */
+    z-index: -1;         /* Отправляем контейнер на задний план, под основной контент */
+    background: url('../images/header-bg.jpg') no-repeat center center/cover; /* Задний фон изображение */
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Видео будет масштабироваться и обрезаться, чтобы заполнить блок */
+    z-index: -1; /* Разместить видео за другими элементами */
+}
+
+.header-content { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 290px;     /*Отступ от верха и ,бока*/
+    
+    position: relative;
+    z-index: 2; /* Поднимаем контент над видео */
+    
+}
+
+.header-content nav ul {
+    display: flex; /*из столбца в строчку ссылки*/
+    list-style-type: none;  /*Убирает маркеры спсиска*/
+    
+}
+/*Ссылки*/
+.header-content nav ul li {     
+    font-size: 24px;    /*Размер шрифта*/
+    margin: 0 20px;     /*Отступы сначало сверху и слева и справа*/
+    
+}
+
+.header-content nav ul li a {
+    color: #d8d3d3;
+    text-decoration: none;  /*Убирает подчеркивание ссылок*/
+    font-weight: 400;/*толщина шрифта*/
+}
+
+.header-text {
+    position: relative;
+    z-index: 2;          /* Поднимаем текст над видео */
+}
+
+.header-text h1 {
+    font-size: 60px; 
+    line-height: 100px; /*Расстояние в межстрочие*/
+    margin-top: 60px; /*Отступ от верха*/
+    margin-bottom: 60px; /*отступ от низа*/
+    font-weight: 600;/*толщина шрифта*/
+}
+
+
+.header-text p {
+    font-size: 14px;
+    max-width: 600px;   /*Ограничение расширение текста*/
+    margin: 0 auto 20px;
+    margin-top: 60px; /*Отступ от верха*/
+    margin-bottom: 60px; /*отступ от низа*/
+}
+
+.btn {
+    margin-top: 40px; /*Отступ от верха*/
+    background-color: #231dd1; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    width: 200px; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    font-size: 14px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 50px; /* Выравнивание текста по вертикали */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    border-radius: 2px; /* Скругленные углы */
+    display: inline-block; /* Делаем кнопку блочным элементом */
+}
+
+                                                                            /*--- 2 блок ---*/
+
+#portfolio {
+    padding: 0px 0;
+    text-align: center;
+    background-color: white;
+}
+
+#portfolio h2 {
+    font-size: 48px; 
+    font-weight: 500;/*толщина шрифта*/
+    color: #383838;
+    margin: 0; /*Отступы сначало сверху и слева и справа*/
+    margin-top: 0px; /*Отступ от верха*/
+    margin-bottom: 94px; /*отступ от низа*/
+}
+
+.portfolio-item {
+    display: flex;
+    position: relative; /*(позиционируется от блока а не от основного HTML документа) Относительное позиционирование контейнера для корректного использования абсолютного позиционирования внутри него */
+    justify-content: space-between;/* Равное пространство между элементами */
+    margin-bottom: 30px;
+    padding: 0 135px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0px;
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1);    Тень*/
+    margin-bottom: 39px;
+}
+
+.portfolio-description {
+    width: 542px; /* Ширина  */
+    height: 372px; /* Высота  */
+}
+.portfolio-description_1{
+    position: relative;
+    right: 30px;
+}
+
+.portfolio-description h3{
+    margin: 0;
+    font-size: 24px; 
+}
+
+.portfolio-description p{
+    text-align: left;
+}
+/*Вертикальная линия*/
+.vertical-line {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    
+    height: 265px; /* Высота линии */
+    width: 1px; /* Ширина линии */
+    background-color: #706c6c; /* Цвет линии */
+    margin: 0 auto; /* Выравнивание по центру */
+    
+}
+
+.portfolio-media {
+    width: 45%;
+    padding: 0px;
+}
+/*Кнопка для 2 блока портфолио*/
+.btn_2 {
+    margin-top: 18px; /*Отступ от верха*/
+    background-color: #231dd1; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    width: 200px; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    font-size: 14px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 50px; /* Выравнивание текста по вертикали */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    border-radius: 2px; /* Скругленные углы */
+    display: block; /* Делаем кнопку блочным элементом */
+    float: left;
+}
+
+.btn_3{
+    margin-top: 18px; /*Отступ от верха*/
+    background-color: #231dd1; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    width: 200px; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    font-size: 14px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 50px; /* Выравнивание текста по вертикали */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    border-radius: 2px; /* Скругленные углы */
+    display: block; /* Делаем кнопку блочным элементом */
+    float: right;
+}
+
+
+
+.media-placeholder iframe{
+    background-color: #ccc;
+    width: 542px; /* Ширина  */
+    height: 300px; /* Высота  */
+    border-radius: 5px;
+    border: none;
+}
+                                                                            /*--- 3 блок ---*/
+#portfolio-grid {
+padding: 0px 0;
+background-color: #fff;
+text-align: center;
+}
+
+#portfolio-grid h2 {
+    font-size: 24px;
+    margin: 0px;
+    margin-top: 60px; /*Отступ от верха*/
+    margin-bottom: 30px; /*отступ низа*/
+    font-weight: 500;/*толщина шрифта*/
+    color: #383838;
+}
+
+.portfolio-grid-container {
+    display: grid; /*создает сетку*/
+    grid-template-columns: repeat(3, 1fr); /* 3 столбца и 1fp одинаковой ширины */
+    gap: 20px; /* Отступ между элементами строками и столбцами */
+    padding: 0 135px;
+}
+
+.portfolio-grid-item iframe {
+    width: 100%;
+    height: 250px; /* Увеличенная высота для лучшего отображения */
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn_4{
+    margin-top: 32px;
+}
+                                                                            /*--- 4 блок ---*/
+#services {
+    padding: 0px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#services h2 {
+    margin-top: 65px;
+    margin-bottom: 32px;
+    font-size: 48px; 
+    font-weight: 500;/*толщина шрифта*/
+    color: #383838;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца одинаковой ширины */
+    gap: 20px; /* Отступ между элементами строками и столбцами */
+    padding: 0 135px; /* Отступы по бокам */
+}
+
+.services-container h3{
+    font-size: 22px;
+    font-weight: 500;/*толщина шрифта*/
+    color: #383838;
+}
+
+.services-container p{
+    text-align: left;
+}
+
+.service {
+    background-color: #f4f4f4; /* Добавьте фон для лучшей видимости блоков */
+    padding: 20px;
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легкая тень для выделения блоков */
+    margin-bottom: 20px;
+}
+
+.btn_5{
+    margin-top: 41px;
+    margin-bottom: 23px;
+}
+
+                                                                            /*--- 5 блок ---*/
+
+#contacts {
+    display: flex;
+    justify-content: space-between; /* Разделяет блоки по бокам */
+    position: relative; /*(позиционируется от блока а не от основного HTML документа) Относительное позиционирование контейнера для корректного использования абсолютного позиционирования внутри него */
+    height: 800px;
+    padding: 0px 135px; /* Добавляет отступы по бокам */
+    background-color: #f4f4f4;
+    border-top: 1px solid #c5c5c5; /*  границу */
+}
+
+/*Вертикальная линия*/
+.vertical-line_1 {
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    
+    height: 700px; /* Высота линии */
+    width: 1px; /* Ширина линии */
+    background-color: #706c6c; /* Цвет линии */
+    margin: 0 auto; /* Выравнивание по центру */
+    
+}
+
+#contacts .contact-info, 
+#contacts .about-studio {
+    width: 45%; /* Ширина каждого блока, чтобы они занимали по 45% от ширины контейнера */
+}
+
+.contact-info_p_1{
+    font-size: 36px;
+    margin-bottom: 0px;
+    font-weight: 500;/*толщина шрифта*/
+
+}
+
+.contact-info_p_2{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 47px;
+}
+
+.about-studio_p_3{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about-studio_p_4{
+    font-size: 18px;
+
+}
+
+#contacts h2 {
+    margin-top: 21px;
+    margin-bottom: 71px;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    color: #383838;
+}
+
+/* #contacts p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+} */
+
+#contacts .social-icons {
+    display: flex;
+    gap: 25px; /* Расстояние между иконками */
+    margin-top: 35px;
+    justify-content: center; /* Центрирование иконок по горизонтали */
+}
+
+#contacts .social-icons a {
+    display: inline-block;
+}
+
+#contacts .social-icons img {
+    width: 80px; /* Размер иконок */
+    height: 80px;
+
+}
+
+                                                                      /*--- 6 блок ---*/
+footer {
+    background-color: #262626;
+    color: white;
+    padding: 8px 135px; /* Добавляет отступы по бокам */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Разделяет столбики по бокам */
+
+}
+
+.footer-column {
+    width: 30%; /* Ширина каждого столбика, чтобы они равномерно распределялись */
+}
+
+.footer-column h3 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-column p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.footer-column h4 {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case{
+    display: flex;
+}
+.case p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    margin: 5px 25px 0px 8px; /* Центрирует логотип и добавляет отступы верх,право,низ,лево*/
+    
+}
+
+footer nav ul {
+    display: flex; /*из столбца в строчку ссылки*/
+    list-style-type: none;
+    padding: 0;
+    margin: 0 9px 0px ;
+    gap: 20px; /*расстояние между ними*/
+}
+
+footer nav ul li {
+    font-size: 18px;
+    margin: 14px 0px 0px; /* Вертикальное расстояние между пунктами */
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column_p{
+    color: #ddd;
+}
+
+.footer-column_p p{
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left; /* Центрирование иконок социальных сетей */
+    gap: 48px; /* Расстояние между иконками */
+    margin-top: 16px;
+}
+
+.social-icons img {
+    width: 31px; /* Размер иконок */
+    height: 31px;
+}
+
+                                                                      /*--- Портфолио ---*/
+                                                                      
+/* Переопределяем фон для страницы портфолио */
+body.portfolio-page header {
+    /*background: white;  Устанавливаем белый фон */
+    background: url('../images/portfolio-bg.jpg') no-repeat center center/cover;
+    height: 426px;  /*высота*/
+
+    /* Добавление нижней границы */
+    border-bottom: 1px solid #c5c5c5; /* Толщина 2px, цвет #c5c5c5, стиль solid (сплошная линия) */
+}
+
+                                                                      /*--- Услуги ---*/
+
+body.services-page header {
+    /*background: white;  Устанавливаем белый фон */
+    background: url('../images/services-bg.png') no-repeat center center/cover;
+    height: 426px;  /*высота*/
+
+    /* Добавление нижней границы */
+    border-bottom: 1px solid #c5c5c5; /* Толщина 2px, цвет #c5c5c5, стиль solid (сплошная линия) */
+}
+
+                                                                      /*--- Контакты ---*/
+
+body.contacts-page header {
+    /*background: white;  Устанавливаем белый фон */
+    background: url('../images/contacts-bg.png') no-repeat center center/cover;
+    height: 426px;  /*высота*/
+
+    /* Добавление нижней границы */
+    border-bottom: 1px solid #c5c5c5; /* Толщина 2px, цвет #c5c5c5, стиль solid (сплошная линия) */
+}                                                                   
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+                                                                      /*--- О студии ---*/
+
+   body.about-page header {
+    /*background: white;  Устанавливаем белый фон */
+    background: url('../images/about-bg.png') no-repeat center center/cover;
+    height: 426px;  /*высота*/
+
+    /* Добавление нижней границы */
+    border-bottom: 1px solid #c5c5c5; /* Толщина 2px, цвет #c5c5c5, стиль solid (сплошная линия) */
+} 
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
